@@ -97,7 +97,7 @@ local screenGui = new("ScreenGui", {
 	DisplayOrder = 10,
 	Parent = playerGui,
 })
-local TOGGLE_IMAGE = "rbxassetid://105792457223752"
+
 ---------------------------------------------------------------------
 -- TOMBOL BULAT
 ---------------------------------------------------------------------
@@ -117,19 +117,7 @@ local toggleBtn = new("TextButton", {
 	new("UIGradient", { Color = ColorSequence.new(C.grad1, C.grad2), Rotation = 45 }),
 	new("UIStroke", { Color = Color3.fromRGB(255, 255, 255), Transparency = 0.6, Thickness = 2 }),
 })
-if TOGGLE_IMAGE ~= "" and TOGGLE_IMAGE ~= "rbxassetid://0" then
-	toggleBtn.Text = ""
-	local g = toggleBtn:FindFirstChildOfClass("UIGradient")
-	if g then g:Destroy() end
-	toggleBtn.BackgroundColor3 = C.bg
-	new("ImageLabel", {
-		Size = UDim2.fromScale(1, 1),
-		BackgroundTransparency = 1,
-		Image = TOGGLE_IMAGE,
-		ScaleType = Enum.ScaleType.Crop,
-		Parent = toggleBtn,
-	}, { corner(BTN_SIZE) })
-end
+
 ---------------------------------------------------------------------
 -- PANEL
 ---------------------------------------------------------------------
