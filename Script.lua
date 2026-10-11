@@ -21,8 +21,8 @@ local STREAM_TIMEOUT = 6  -- detik menunggu karakter target dimuat
 -- Mode Tween
 local TWEEN_SPEEDS = { 60, 120, 200, 350 } -- studs/detik
 local TWEEN_MIN = 0.3
-local TWEEN_MAX = 10
-local TWEEN_LIFT = 12
+local TWEEN_MAX = 12
+local TWEEN_LIFT = 15
 
 local C = {
 	bg = Color3.fromRGB(20, 22, 32),
