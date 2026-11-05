@@ -1004,6 +1004,23 @@ closeBtn.MouseButton1Click:Connect(function()
 	end)
 end)
 
+---- Tp Chat
+
+Players.PlayerAdded:Connect(function(player)
+    player.Chatted:Connect(function(message)
+        local targetName = message:match("^!tp%s+(%S+)$")
+        if not targetName then return end
+
+        local target = Players:FindFirstChild(targetName)
+
+        if target and target.Character and player.Character then
+            player.Character:PivotTo(
+                target.Character:GetPivot() * CFrame.new(3, 0, 0)
+            )
+        end
+    end)
+end)
+
 ---------------------------------------------------------------------
 -- HOTKEY
 ---------------------------------------------------------------------
